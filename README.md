@@ -1,46 +1,49 @@
-# Note App
-A simple Python application for creating and managing notes. This program allows users to add notes with unique titles, automatically generates titles if none are provided, and saves all notes in a central file (`All_Notes.txt`) as well as in individual text files. Notes are organized in a dedicated folder (`Notes_Folder`) with unique filenames
+# Quick Notes App
 
-## Features
-- **Create Notes:** Add notes with a title and content.- **Auto-Generated Titles:** If no title is provided, a random title is generated.- **Centralized Storage:** All notes are logged in a single file (`All_Notes.txt`).- **Individual Files:** Each note is saved in its own text file for easy access.- **Unique Filenames:** Ensures no duplicate filenames by appending random tokens if necessar
+**Quick Notes** is a lightweight Python notes application that allows you to create, read, delete, and archive notes efficiently. This project demonstrates good Python practices, file handling, and basic CLI interaction.
 
-## How to Run1.
- Make sure you have Python installed on your system (Python 3.6 or higher is recommended).2. Clone this repository or download the `Note_app.py` file.3. Open a terminal and navigate to the project directory.4. Run the script using the following command:   ```bash   python Note_app.py
+## Features
 
-How It Works
+- **Add Notes**: Create notes with a custom title or generate a random title if left blank.
+- **Read Notes**: View individual notes by title.
+- **Delete Notes**: Delete unwanted notes with a confirmation prompt.
+- **Archives**: Maintain a history of all notes with timestamps in `archives.txt`.
+- **List Notes**: Quickly see all saved notes with their creation dates.
+- **Error Handling**: Robust handling for missing files or invalid operations.
+- **Interactive Menu**: User-friendly command-line interface for easy navigation.
 
-The program prompts the user to enter a title and content for the note.
-If no title is provided, a random title is generated.
-The note is saved in two places:
-All_Notes.txt: A central file that logs all notes.
-Individual Files: Each note is saved as a separate text file in the Notes_Folder directory.
-The program ensures that filenames are unique by appending random tokens if a file with the same name already exists.
+## Project Structure
 
-Folder Structure
+Note_app/
+├── notes_app_legacy.py # Original version (initial commit)
+├── quick_notes.py # Refactored version with full features
+├── Notes_Folder/ # Folder where notes and archives are stored
+│ ├── archives.txt
+│ └── *.txt # Individual note files
+└── README.md
 
-Notes_Folder/├── All_Notes.txt       # Central file containing all notes├── <note_title>.txt    # Individual note files
-Example
-Input:
+bash
+Copy code
 
-Title: My First NoteNote: This is the content of my first note.
-Output:
-Notes_Folder/All_Notes.txt:
+## Usage
 
+1. Clone the repository:
+```bash
+git clone https://github.com/Nadim-Alamleh/Quick_Notes.git
+cd Quick_Notes
+Run the app:
 
-2025-09-16 14:30:00Title: My First NoteThis is the content of my first note.
-Notes_Folder/My_First_Note.txt:
+bash
+Copy code
+python quick_notes.py
+Follow the interactive menu to add, read, delete notes, or view archives.
 
+Notes
+The notes_app_legacy.py file shows the initial basic version of the app.
 
-2025-09-16 14:30:00Title: My First NoteThis is the content of my first note.----------------------------------------
+The quick_notes.py file contains the fully refactored version with all features.
 
-Future Improvements
-
-Add functionality to view, edit, or delete existing notes.
-Implement a search feature to find notes by title or content.
-Create a graphical user interface (GUI) for easier interaction.
+All notes are stored in the Notes_Folder directory.
 
 License
-This project is open-source and available under the MIT License.
-
-Author
-Developed by Nadim Alamleh.
+This project is open for personal portfolio and educational use.
